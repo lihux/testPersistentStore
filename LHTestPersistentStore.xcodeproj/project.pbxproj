@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35DFBA751C2D88DC6569D314 /* libPods-LHTestPersistentStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C114C5E51ACECBEFED2EEF7B /* libPods-LHTestPersistentStore.a */; };
 		5298D39C20808FEF00161B7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D39B20808FEF00161B7C /* AppDelegate.m */; };
 		5298D39F20808FEF00161B7C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D39E20808FEF00161B7C /* MasterViewController.m */; };
 		5298D3A220808FEF00161B7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3A120808FEF00161B7C /* DetailViewController.m */; };
@@ -51,6 +52,9 @@
 		5298D3CA20809DEF00161B7C /* LHBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHBaseModel.m; sourceTree = "<group>"; };
 		5298D3CC2080A0C700161B7C /* LHRawSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHRawSqlManager.h; sourceTree = "<group>"; };
 		5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHRawSqlManager.m; sourceTree = "<group>"; };
+		B1DB782FDACC4367589BAD90 /* Pods-LHTestPersistentStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHTestPersistentStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHTestPersistentStore/Pods-LHTestPersistentStore.debug.xcconfig"; sourceTree = "<group>"; };
+		C114C5E51ACECBEFED2EEF7B /* libPods-LHTestPersistentStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHTestPersistentStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98B991EB46496E78E9522DB /* Pods-LHTestPersistentStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHTestPersistentStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHTestPersistentStore/Pods-LHTestPersistentStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DFBA751C2D88DC6569D314 /* libPods-LHTestPersistentStore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,8 @@
 				5298D39920808FEF00161B7C /* LHTestPersistentStore */,
 				5298D3B520808FEF00161B7C /* LHTestPersistentStoreTests */,
 				5298D39820808FEF00161B7C /* Products */,
+				ACCEB23588EA468AA1CFFB45 /* Pods */,
+				54B9431798F4FEAC51E8838F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +168,23 @@
 			path = RawSqlite;
 			sourceTree = "<group>";
 		};
+		54B9431798F4FEAC51E8838F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C114C5E51ACECBEFED2EEF7B /* libPods-LHTestPersistentStore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACCEB23588EA468AA1CFFB45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1DB782FDACC4367589BAD90 /* Pods-LHTestPersistentStore.debug.xcconfig */,
+				C98B991EB46496E78E9522DB /* Pods-LHTestPersistentStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5298D3BB20808FEF00161B7C /* Build configuration list for PBXNativeTarget "LHTestPersistentStore" */;
 			buildPhases = (
+				870D77E24DDEECB68AFF25F6 /* [CP] Check Pods Manifest.lock */,
 				5298D39320808FEF00161B7C /* Sources */,
 				5298D39420808FEF00161B7C /* Frameworks */,
 				5298D39520808FEF00161B7C /* Resources */,
+				486315E1D61D146ADFF29EBD /* [CP] Embed Pods Frameworks */,
+				565E62A876F8C0EB98014B86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +285,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		486315E1D61D146ADFF29EBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHTestPersistentStore/Pods-LHTestPersistentStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		565E62A876F8C0EB98014B86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHTestPersistentStore/Pods-LHTestPersistentStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		870D77E24DDEECB68AFF25F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5298D39320808FEF00161B7C /* Sources */ = {
@@ -417,6 +492,7 @@
 		};
 		5298D3BC20808FEF00161B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1DB782FDACC4367589BAD90 /* Pods-LHTestPersistentStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +506,7 @@
 		};
 		5298D3BD20808FEF00161B7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C98B991EB46496E78E9522DB /* Pods-LHTestPersistentStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
