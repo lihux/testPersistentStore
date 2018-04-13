@@ -10,4 +10,7 @@
 
 @implementation LHAlbum
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"albumId:%@ artistId:%@ title:%@", self.AlbumId, self.ArtistId, self.Title];
+}
 @end

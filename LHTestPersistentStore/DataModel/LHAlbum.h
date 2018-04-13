@@ -10,4 +10,8 @@
 
 @interface LHAlbum : NSObject
 
+@property (nonatomic, copy) NSString *AlbumId;
+@property (nonatomic, copy) NSString *ArtistId;
+@property (nonatomic, copy) NSString *Title;
+
 @end

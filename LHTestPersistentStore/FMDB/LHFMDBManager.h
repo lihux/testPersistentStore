@@ -12,8 +12,6 @@
 
 @interface LHFMDBManager : LHBaseDBManager
 
-- (instancetype)initWithDBPath:(NSString *)path;
-
 - (NSArray *)getAllAlbums;
 
 @end

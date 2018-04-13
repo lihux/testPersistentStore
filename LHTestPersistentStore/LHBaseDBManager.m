@@ -17,8 +17,19 @@
 - (instancetype)initWithDBPath:(NSString *)path {
     if (self = [super init]) {
         self.dbPath = path;
+        NSString *toPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+        toPath = [toPath stringByAppendingString:@"fmdbText.db"];
+        [self copyDBFileFromPath:path toPath:toPath];
+        self.dbPath = toPath;
     }
     return self;
+}
+
+- (void)copyDBFileFromPath:(NSString *)fromPath toPath:(NSString *)toPath {
+    NSAssert(fromPath && toPath, @"数据库拷贝缺少正确的路径");
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSAssert([fileManager fileExistsAtPath:fromPath], @"路径中没有数据库");
+    [fileManager copyItemAtPath:fromPath toPath:toPath error:nil];
 }
 
 - (NSArray *)getAllAlbums {
