@@ -17,6 +17,7 @@
 		5298D3B720808FEF00161B7C /* LHTestPersistentStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3B620808FEF00161B7C /* LHTestPersistentStoreTests.m */; };
 		5298D3C32080963800161B7C /* chinook.db in Resources */ = {isa = PBXBuildFile; fileRef = 5298D3C22080963800161B7C /* chinook.db */; };
 		5298D3CB20809DEF00161B7C /* LHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3CA20809DEF00161B7C /* LHBaseModel.m */; };
+		5298D3CE2080A0C700161B7C /* LHRawSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		5298D3C22080963800161B7C /* chinook.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinook.db; sourceTree = "<group>"; };
 		5298D3C920809DEF00161B7C /* LHBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHBaseModel.h; sourceTree = "<group>"; };
 		5298D3CA20809DEF00161B7C /* LHBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHBaseModel.m; sourceTree = "<group>"; };
+		5298D3CC2080A0C700161B7C /* LHRawSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHRawSqlManager.h; sourceTree = "<group>"; };
+		5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHRawSqlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 		5298D3C7208098FB00161B7C /* RawSqlite */ = {
 			isa = PBXGroup;
 			children = (
+				5298D3CC2080A0C700161B7C /* LHRawSqlManager.h */,
+				5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */,
 			);
 			path = RawSqlite;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				5298D39C20808FEF00161B7C /* AppDelegate.m in Sources */,
 				5298D3AD20808FEF00161B7C /* main.m in Sources */,
 				5298D3A220808FEF00161B7C /* DetailViewController.m in Sources */,
+				5298D3CE2080A0C700161B7C /* LHRawSqlManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
