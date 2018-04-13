@@ -19,6 +19,9 @@
 		5298D3C32080963800161B7C /* chinook.db in Resources */ = {isa = PBXBuildFile; fileRef = 5298D3C22080963800161B7C /* chinook.db */; };
 		5298D3CB20809DEF00161B7C /* LHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3CA20809DEF00161B7C /* LHBaseModel.m */; };
 		5298D3CE2080A0C700161B7C /* LHRawSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */; };
+		5298D3D22080AFCA00161B7C /* LHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3D12080AFCA00161B7C /* LHAlbum.m */; };
+		5298D3D52080B08200161B7C /* LHFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3D42080B08200161B7C /* LHFMDBManager.m */; };
+		5298D3D82080B5B400161B7C /* LHBaseDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3D72080B5B400161B7C /* LHBaseDBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,12 @@
 		5298D3CA20809DEF00161B7C /* LHBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHBaseModel.m; sourceTree = "<group>"; };
 		5298D3CC2080A0C700161B7C /* LHRawSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHRawSqlManager.h; sourceTree = "<group>"; };
 		5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHRawSqlManager.m; sourceTree = "<group>"; };
+		5298D3D02080AFCA00161B7C /* LHAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHAlbum.h; sourceTree = "<group>"; };
+		5298D3D12080AFCA00161B7C /* LHAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHAlbum.m; sourceTree = "<group>"; };
+		5298D3D32080B08200161B7C /* LHFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHFMDBManager.h; sourceTree = "<group>"; };
+		5298D3D42080B08200161B7C /* LHFMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHFMDBManager.m; sourceTree = "<group>"; };
+		5298D3D62080B5B400161B7C /* LHBaseDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHBaseDBManager.h; sourceTree = "<group>"; };
+		5298D3D72080B5B400161B7C /* LHBaseDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHBaseDBManager.m; sourceTree = "<group>"; };
 		B1DB782FDACC4367589BAD90 /* Pods-LHTestPersistentStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHTestPersistentStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHTestPersistentStore/Pods-LHTestPersistentStore.debug.xcconfig"; sourceTree = "<group>"; };
 		C114C5E51ACECBEFED2EEF7B /* libPods-LHTestPersistentStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LHTestPersistentStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98B991EB46496E78E9522DB /* Pods-LHTestPersistentStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHTestPersistentStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHTestPersistentStore/Pods-LHTestPersistentStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,8 +124,9 @@
 				5298D3A820808FEF00161B7C /* LaunchScreen.storyboard */,
 				5298D3AB20808FEF00161B7C /* Info.plist */,
 				5298D3AC20808FEF00161B7C /* main.m */,
-				5298D3C920809DEF00161B7C /* LHBaseModel.h */,
-				5298D3CA20809DEF00161B7C /* LHBaseModel.m */,
+				5298D3CF2080AFB300161B7C /* DataModel */,
+				5298D3D62080B5B400161B7C /* LHBaseDBManager.h */,
+				5298D3D72080B5B400161B7C /* LHBaseDBManager.m */,
 			);
 			path = LHTestPersistentStore;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 		5298D3C4208098DE00161B7C /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				5298D3D32080B08200161B7C /* LHFMDBManager.h */,
+				5298D3D42080B08200161B7C /* LHFMDBManager.m */,
 			);
 			path = FMDB;
 			sourceTree = "<group>";
@@ -166,6 +178,17 @@
 				5298D3CD2080A0C700161B7C /* LHRawSqlManager.m */,
 			);
 			path = RawSqlite;
+			sourceTree = "<group>";
+		};
+		5298D3CF2080AFB300161B7C /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				5298D3C920809DEF00161B7C /* LHBaseModel.h */,
+				5298D3CA20809DEF00161B7C /* LHBaseModel.m */,
+				5298D3D02080AFCA00161B7C /* LHAlbum.h */,
+				5298D3D12080AFCA00161B7C /* LHAlbum.m */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		54B9431798F4FEAC51E8838F /* Frameworks */ = {
@@ -339,10 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5298D3D82080B5B400161B7C /* LHBaseDBManager.m in Sources */,
 				5298D3CB20809DEF00161B7C /* LHBaseModel.m in Sources */,
 				5298D39F20808FEF00161B7C /* MasterViewController.m in Sources */,
+				5298D3D52080B08200161B7C /* LHFMDBManager.m in Sources */,
 				5298D39C20808FEF00161B7C /* AppDelegate.m in Sources */,
 				5298D3AD20808FEF00161B7C /* main.m in Sources */,
+				5298D3D22080AFCA00161B7C /* LHAlbum.m in Sources */,
 				5298D3A220808FEF00161B7C /* DetailViewController.m in Sources */,
 				5298D3CE2080A0C700161B7C /* LHRawSqlManager.m in Sources */,
 			);

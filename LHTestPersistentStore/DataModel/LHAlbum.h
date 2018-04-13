@@ -1,13 +1,13 @@
 //
-//  LHRawSqlManager.h
+//  LHAlbum.h
 //  LHTestPersistentStore
 //
 //  Created by 李辉 on 2018/4/13.
 //  Copyright © 2018年 李辉. All rights reserved.
 //
 
-#import "LHBaseDBManager.h"
+#import <Foundation/Foundation.h>
 
-@interface LHRawSqlManager : LHBaseDBManager
+@interface LHAlbum : NSObject
 
 @end

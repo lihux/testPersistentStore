@@ -7,19 +7,27 @@
 //
 
 #import "MasterViewController.h"
+
 #import "DetailViewController.h"
+#import "LHFMDBManager.h"
+#import "LHAlbum.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+@property (nonatomic, strong) LHFMDBManager *fmdbManager;
+@property (nonatomic, strong) NSArray *albums;
+@property (nonatomic, copy) NSString *dbPath;
+
 @end
 
 @implementation MasterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.dbPath = [[NSBundle mainBundle] pathForResource:@"chinook" ofType:@"db"];
+    [self loadData];
 }
 
 
@@ -28,12 +36,10 @@
     [super viewWillAppear:animated];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadData {
+    self.albums = [self.fmdbManager getAllAlbums];
+    [self.tableView reloadData];
 }
-
 
 - (void)insertNewObject:(id)sender {
     if (!self.objects) {
@@ -67,32 +73,22 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return self.albums.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    LHAlbum *album = self.albums[indexPath.row];
+    cell.textLabel.text = [album description];
     return cell;
 }
 
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+- (LHFMDBManager *)fmdbManager {
+    if (_fmdbManager) {
+        return _fmdbManager;
     }
+    _fmdbManager = [[LHFMDBManager alloc] initWithDBPath:self.dbPath];
+    return _fmdbManager;
 }
-
 
 @end

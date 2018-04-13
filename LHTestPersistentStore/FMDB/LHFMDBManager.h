@@ -1,5 +1,5 @@
 //
-//  LHRawSqlManager.h
+//  LHFMDBManager.h
 //  LHTestPersistentStore
 //
 //  Created by 李辉 on 2018/4/13.
@@ -8,6 +8,12 @@
 
 #import "LHBaseDBManager.h"
 
-@interface LHRawSqlManager : LHBaseDBManager
+@class LHAlbum;
+
+@interface LHFMDBManager : LHBaseDBManager
+
+- (instancetype)initWithDBPath:(NSString *)path;
+
+- (NSArray *)getAllAlbums;
 
 @end
