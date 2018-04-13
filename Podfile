@@ -6,6 +6,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'LHTestPersistentStore' do
     pod 'LKDBHelper'
     pod 'WCDB'
+    pod 'YYModel'
     #pod 'ios-core'
 end
 
