@@ -15,6 +15,8 @@
 		5298D3AA20808FEF00161B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5298D3A820808FEF00161B7C /* LaunchScreen.storyboard */; };
 		5298D3AD20808FEF00161B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3AC20808FEF00161B7C /* main.m */; };
 		5298D3B720808FEF00161B7C /* LHTestPersistentStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3B620808FEF00161B7C /* LHTestPersistentStoreTests.m */; };
+		5298D3C32080963800161B7C /* chinook.db in Resources */ = {isa = PBXBuildFile; fileRef = 5298D3C22080963800161B7C /* chinook.db */; };
+		5298D3CB20809DEF00161B7C /* LHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5298D3CA20809DEF00161B7C /* LHBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		5298D3B220808FEF00161B7C /* LHTestPersistentStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHTestPersistentStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5298D3B620808FEF00161B7C /* LHTestPersistentStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHTestPersistentStoreTests.m; sourceTree = "<group>"; };
 		5298D3B820808FEF00161B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5298D3C22080963800161B7C /* chinook.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinook.db; sourceTree = "<group>"; };
+		5298D3C920809DEF00161B7C /* LHBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHBaseModel.h; sourceTree = "<group>"; };
+		5298D3CA20809DEF00161B7C /* LHBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHBaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,11 @@
 		5298D39920808FEF00161B7C /* LHTestPersistentStore */ = {
 			isa = PBXGroup;
 			children = (
+				5298D3C7208098FB00161B7C /* RawSqlite */,
+				5298D3C6208098F300161B7C /* CoreData */,
+				5298D3C5208098E800161B7C /* LKDBHelper */,
+				5298D3C4208098DE00161B7C /* FMDB */,
+				5298D3C1208095C900161B7C /* Resources */,
 				5298D39A20808FEF00161B7C /* AppDelegate.h */,
 				5298D39B20808FEF00161B7C /* AppDelegate.m */,
 				5298D39D20808FEF00161B7C /* MasterViewController.h */,
@@ -95,6 +105,8 @@
 				5298D3A820808FEF00161B7C /* LaunchScreen.storyboard */,
 				5298D3AB20808FEF00161B7C /* Info.plist */,
 				5298D3AC20808FEF00161B7C /* main.m */,
+				5298D3C920809DEF00161B7C /* LHBaseModel.h */,
+				5298D3CA20809DEF00161B7C /* LHBaseModel.m */,
 			);
 			path = LHTestPersistentStore;
 			sourceTree = "<group>";
@@ -106,6 +118,42 @@
 				5298D3B820808FEF00161B7C /* Info.plist */,
 			);
 			path = LHTestPersistentStoreTests;
+			sourceTree = "<group>";
+		};
+		5298D3C1208095C900161B7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5298D3C22080963800161B7C /* chinook.db */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5298D3C4208098DE00161B7C /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		5298D3C5208098E800161B7C /* LKDBHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LKDBHelper;
+			sourceTree = "<group>";
+		};
+		5298D3C6208098F300161B7C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5298D3C7208098FB00161B7C /* RawSqlite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RawSqlite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5298D3AA20808FEF00161B7C /* LaunchScreen.storyboard in Resources */,
+				5298D3C32080963800161B7C /* chinook.db in Resources */,
 				5298D3A720808FEF00161B7C /* Assets.xcassets in Resources */,
 				5298D3A520808FEF00161B7C /* Main.storyboard in Resources */,
 			);
@@ -210,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5298D3CB20809DEF00161B7C /* LHBaseModel.m in Sources */,
 				5298D39F20808FEF00161B7C /* MasterViewController.m in Sources */,
 				5298D39C20808FEF00161B7C /* AppDelegate.m in Sources */,
 				5298D3AD20808FEF00161B7C /* main.m in Sources */,
